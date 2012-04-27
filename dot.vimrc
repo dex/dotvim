@@ -1,0 +1,101 @@
+" Genernal setting {{{1
+set foldmethod=marker
+set autoindent
+set cindent
+set smarttab
+set enc=taiwan
+set fileencoding=taiwan
+set hls                
+set nocompatible
+set ruler
+syntax on
+highlight Search term=reverse ctermbg=4 ctermfg=7
+colors torte
+filetype indent on
+filetype plugin on
+
+
+" encodings {{{1
+set fileencoding=utf-8
+set fileencodings=big5,utf-8,ucs-bom,gbk,latin1
+"set ffs=unix,dos
+"set ff=unix
+set encoding=utf-8
+set termencoding=utf-8
+
+" tab setup {{{1
+au BufRead,BufNewFile *.py set ts=4 sw=4 et
+au BufRead,BufNewFile *.c,*.h set sw=8
+
+" jQuery syntax {{{1
+au BufRead,BufNewFile *.js set ft=javascript.jquery
+
+
+" TagList {{{1
+nnoremap <silent> <f12> :Tlist<cr>
+nnoremap <silent> <f9> :wincmd p<cr>
+let Tlist_WinWidth = 40
+
+" Rebuild tags {{{1
+nmap <F5> <Esc>:!uptag<Cr><Esc>:cs r<CR>
+
+" CVS {{{1
+let CVSCommandEdit='split'
+"let CVSCommandDiffOpt='wbBup'
+let CVSCommandDiffOpt='up'
+
+" for PHP fold plugin {{{1
+"map <F5> <Esc>:EnableFastPHPFolds<Cr>
+"map <F6> <Esc>:EnablePHPFolds<Cr>
+"map <F7> <Esc>:DisablePHPFolds<Cr> 
+"let php_folding=0
+"source ~/.vim/plugin/phpfolding.vim 
+"set tags+=~/.vim/systags
+set completeopt=longest,menu
+
+" Set cscope {{{1
+if has("cscope")
+	set csprg=/usr/bin/cscope
+	set csto=0
+	set cst
+	set nocsverb
+	" add any database in current directory
+	if filereadable("cscope.out")
+	    cs add cscope.out
+	" else add database pointed to by environment
+	elseif $CSCOPE_DB != ""
+	    cs add $CSCOPE_DB
+	endif
+	set csverb
+endif
+nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+"let g:SuperTabRetainCompletionType=2
+"let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+
+" minibufexplorer {{{1
+let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavArrows = 1 
+let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplModSelTarget = 1 
+
+" acp {{{1
+"let g:acp_behaviorSnipmateLength=1
+let g:acp_completeOption = '.,w,b,u,t,i,k'
+
+" highlight column 79 {{{1
+"highlight col79 ctermbg=red
+"match col79 /\%<80v.\%>79v/
+
+" ultisnips {{{1
+set runtimepath+=~/.vim/ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
