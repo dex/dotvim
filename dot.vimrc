@@ -97,7 +97,6 @@ let g:acp_completeOption = '.,w,b,u,t,i,k'
 "match col79 /\%<80v.\%>79v/
 
 " ultisnips {{{1
-set runtimepath+=~/.vim/ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
