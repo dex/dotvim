@@ -10,6 +10,3 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule "AutoCompPop"]
-	path = AutoCompPop
-	url = https://github.com/vim-scripts/AutoComplPop.git
