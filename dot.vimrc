@@ -30,6 +30,8 @@ au BufRead,BufNewFile *.c,*.h set sw=8
 " jQuery syntax {{{1
 au BufRead,BufNewFile *.js set ft=javascript.jquery
 
+" Pathogen {{{1
+call pathogen#infect()
 
 " TagList {{{1
 nnoremap <silent> <f12> :Tlist<cr>
