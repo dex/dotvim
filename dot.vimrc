@@ -31,6 +31,7 @@ au BufRead,BufNewFile *.c,*.h set sw=8
 au BufRead,BufNewFile *.js set ft=javascript.jquery
 
 " Pathogen {{{1
+set runtimepath+=~/.vim/bundle/vim-pathogen
 call pathogen#infect()
 
 " TagList {{{1
