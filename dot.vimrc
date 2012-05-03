@@ -25,7 +25,7 @@ set termencoding=utf-8
 
 " tab setup {{{1
 au BufRead,BufNewFile *.py set ts=4 sw=4 et
-au BufRead,BufNewFile *.c,*.h set sw=8
+au BufRead,BufNewFile *.c,*.h set sw=4
 
 " jQuery syntax {{{1
 au BufRead,BufNewFile *.js set ft=javascript.jquery
