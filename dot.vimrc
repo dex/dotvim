@@ -10,6 +10,7 @@ set nocompatible
 set ruler
 syntax on
 highlight Search term=reverse ctermbg=4 ctermfg=7
+colors torte
 filetype indent on
 filetype plugin on
 
@@ -100,7 +101,3 @@ let g:acp_completeOption = '.,w,b,u,t,i,k'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-" solarized color schema {{{1
-set background=dark
-colors solarized
