@@ -37,7 +37,7 @@ call pathogen#infect()
 " TagList {{{1
 nnoremap <silent> <f12> :Tlist<cr>
 nnoremap <silent> <f9> :wincmd p<cr>
-let Tlist_WinWidth = 40
+let Tlist_WinWidth = 45
 
 " Rebuild tags {{{1
 nmap <F5> <Esc>:!uptag<Cr><Esc>:cs r<CR>
@@ -82,6 +82,11 @@ nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 "let g:SuperTabRetainCompletionType=2
 "let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+nmap <S-CR> <Esc>:cc<CR>
+nmap <S-Up> <Esc>:cp<CR>
+nmap <S-Down> <Esc>:cn<CR>
+nmap <S-Left> <Esc>:cold<CR>
+nmap <S-Right> <Esc>:cnew<CR>
 
 " minibufexplorer {{{1
 let g:miniBufExplMapWindowNavVim = 1 
