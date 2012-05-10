@@ -82,6 +82,8 @@ nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 "let g:SuperTabRetainCompletionType=2
 "let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+nmap <S-F12> <Esc>:copen<CR>
+nmap <S-F11> <Esc>:cclose<CR>
 nmap <S-CR> <Esc>:cc<CR>
 nmap <S-Up> <Esc>:cp<CR>
 nmap <S-Down> <Esc>:cn<CR>
