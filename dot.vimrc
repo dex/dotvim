@@ -14,7 +14,6 @@ colors torte
 filetype indent on
 filetype plugin on
 
-
 " encodings {{{1
 set fileencoding=utf-8
 set fileencodings=big5,utf-8,ucs-bom,gbk,latin1
@@ -25,7 +24,7 @@ set termencoding=utf-8
 
 " tab setup {{{1
 au BufRead,BufNewFile *.py set ts=4 sw=4 et
-au BufRead,BufNewFile *.c,*.h set sw=4
+au BufRead,BufNewFile *.c,*.h set ts=4 sw=4 et
 
 " jQuery syntax {{{1
 au BufRead,BufNewFile *.js set ft=javascript.jquery
@@ -108,3 +107,8 @@ let g:acp_completeOption = '.,w,b,u,t,i,k'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" NERD Tree {{{1
+let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinSize = 45
+map <F8> <ESC>:NERDTreeToggle<CR>
