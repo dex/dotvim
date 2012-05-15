@@ -37,6 +37,7 @@ call pathogen#infect()
 nnoremap <silent> <f12> :Tlist<cr>
 nnoremap <silent> <f9> :wincmd p<cr>
 let Tlist_WinWidth = 45
+let Tlist_Show_One_File = 1
 
 " Rebuild tags {{{1
 nmap <F5> <Esc>:!uptag<Cr><Esc>:cs r<CR>
