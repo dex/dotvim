@@ -13,6 +13,7 @@ highlight Search term=reverse ctermbg=4 ctermfg=7
 colors torte
 filetype indent on
 filetype plugin on
+set cursorline
 
 " encodings {{{1
 set fileencoding=utf-8
