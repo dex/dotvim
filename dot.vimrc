@@ -13,7 +13,6 @@ highlight Search term=reverse ctermbg=4 ctermfg=7
 colors torte
 filetype indent on
 filetype plugin on
-set cursorline
 
 " encodings {{{1
 set fileencoding=utf-8
@@ -25,7 +24,7 @@ set termencoding=utf-8
 
 " tab setup {{{1
 au BufRead,BufNewFile *.py set ts=4 sw=4 et
-au BufRead,BufNewFile *.c,*.h set ts=4 sw=4 et
+au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
 
 " jQuery syntax {{{1
 au BufRead,BufNewFile *.js set ft=javascript.jquery
@@ -92,6 +91,7 @@ nmap <S-Left> <Esc>:cold<CR>
 nmap <S-Right> <Esc>:cnew<CR>
 
 " minibufexplorer {{{1
+let g:miniBufExplorerMoreThanOne=10000
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
