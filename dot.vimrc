@@ -27,7 +27,7 @@ au BufRead,BufNewFile *.py set ts=4 sw=4 et
 au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
 
 " jQuery syntax {{{1
-au BufRead,BufNewFile *.js set ft=javascript.jquery
+"au BufRead,BufNewFile *.js set ft=javascript.jquery
 
 " Pathogen {{{1
 runtime bundle/vim-pathogen/autoload/pathogen.vim
