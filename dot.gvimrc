@@ -7,7 +7,7 @@ let g:solarized_visibility="high"    "default value is normal
 "set background=dark
 "colors solarized
 "colors torte
-colors dsert
+colors desert
 
 set columns=80
 set lines=50
