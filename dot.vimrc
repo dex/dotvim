@@ -34,7 +34,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 " TagList {{{1
-nnoremap <silent> <f12> :Tlist<cr>
+nnoremap <silent> <f11> :Tlist<cr>
 nnoremap <silent> <f9> :wincmd p<cr>
 let Tlist_WinWidth = 45
 let Tlist_Show_One_File = 1
@@ -114,3 +114,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize = 45
 map <F8> <ESC>:NERDTreeToggle<CR>
+
+" Tagbar {{{1
+let g:tagbar_left = 1
+let g:tagbar_expand = 1
+let g:tagbar_width = 45
+map <F12> <ESC>:TagbarToggle<CR>
