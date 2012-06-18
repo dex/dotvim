@@ -4,7 +4,7 @@ set guifont=Consolas\ 11
 " Set the color schema
 let g:solarized_contrast="high"    "default value is normal
 let g:solarized_visibility="high"    "default value is normal
-let g:solarized_hitrail=1    "default value is 0
+"let g:solarized_hitrail=1    "default value is 0
 set background=dark
 colors solarized
 "colors torte
