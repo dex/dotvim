@@ -1,3 +1,4 @@
+set guioptions-=m  "Disable menu
 set guioptions-=T  "Disable toolbar
 set guifont=Consolas\ 11
 "set guifont=Monospace\ 11
