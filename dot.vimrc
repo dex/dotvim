@@ -119,5 +119,5 @@ map <F8> <ESC>:NERDTreeToggle<CR>
 let g:tagbar_left = 1
 let g:tagbar_expand = 1
 let g:tagbar_width = 45
-highlight link TagbarSignature Comment
+highlight link TagbarSignature helpNote
 map <F12> <ESC>:TagbarToggle<CR>
