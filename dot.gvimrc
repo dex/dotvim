@@ -1,6 +1,6 @@
 set guioptions-=m  "Disable menu
 set guioptions-=T  "Disable toolbar
-set guifont=Consolas\ 11
+set guifont=Consolas\ 10
 "set guifont=Monospace\ 11
 
 " Set the color schema
@@ -12,8 +12,8 @@ colors solarized
 "colors torte
 "colors desert
 
-set columns=80
-set lines=50
+set columns=160
+set lines=58
 set number
 set cursorline
 "highlight col79 guibg=red
