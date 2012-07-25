@@ -124,3 +124,4 @@ map <F12> <ESC>:TagbarToggle<CR>
 
 " powerline {{{1
 let g:Powerline_symbols = 'fancy'
+set laststatus=2
