@@ -16,7 +16,7 @@ filetype plugin on
 
 " encodings {{{1
 set fileencoding=utf-8
-set fileencodings=big5,utf-8,ucs-bom,gbk,latin1
+set fileencodings=utf-8,big5,ucs-bom,gbk,latin1
 "set ffs=unix,dos
 "set ff=unix
 set encoding=utf-8
