@@ -126,3 +126,7 @@ map <F12> <ESC>:TagbarToggle<CR>
 let g:Powerline_symbols = 'fancy'
 set t_Co=256
 set laststatus=2
+
+" CtrlP {{{1
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
