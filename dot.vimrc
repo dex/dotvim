@@ -114,6 +114,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize = 45
 map <F8> <ESC>:NERDTreeToggle<CR>
+map <F2> <ESC>cd<ESC>:cs r<CR>
 
 " Tagbar {{{1
 let g:tagbar_left = 1
