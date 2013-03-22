@@ -2,6 +2,7 @@
 set foldmethod=marker
 set autoindent
 set cindent
+set cinoptions=(0
 set smarttab
 set enc=taiwan
 set fileencoding=taiwan

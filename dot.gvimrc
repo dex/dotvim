@@ -15,7 +15,7 @@ colors solarized
 "colors desert
 
 set columns=160
-set lines=58
+set lines=66
 set number
 set cursorline
 "highlight col79 guibg=red
