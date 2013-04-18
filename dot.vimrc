@@ -11,7 +11,7 @@ set nocompatible
 set ruler
 syntax on
 highlight Search term=reverse ctermbg=4 ctermfg=7
-colors torte
+colors default
 filetype indent on
 filetype plugin on
 
