@@ -121,7 +121,7 @@ let g:tagbar_left = 1
 let g:tagbar_expand = 1
 let g:tagbar_width = 45
 highlight link TagbarSignature helpNote
-map <F12> <ESC>:TagbarToggle<CR>
+map <F7> <ESC>:TagbarToggle<CR>
 
 " powerline {{{1
 let g:Powerline_symbols = 'fancy'
@@ -136,3 +136,6 @@ let g:ctrlp_working_path_mode = '0'
 "ColorSchema {{{1
 colors vividchalk
 set background=dark
+
+" MyIDE {{{1
+map <F12> <Esc>:copen<CR><ESC>:NERDTreeToggle<CR><ESC>:TagbarToggle<CR><ESC><C-h>
