@@ -139,3 +139,4 @@ set background=dark
 
 " MyIDE {{{1
 map <F12> <Esc>:copen<CR><ESC>:NERDTreeToggle<CR><ESC>:TagbarToggle<CR><ESC><C-h>
+map <C-\> <Esc>:!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
