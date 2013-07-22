@@ -82,13 +82,13 @@ nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 "let g:SuperTabRetainCompletionType=2
 "let g:SuperTabDefaultCompletionType="<C-X><C-O>"
-nmap <S-F12> <Esc>:copen<CR>
-nmap <S-F11> <Esc>:cclose<CR>
-nmap <S-CR> <Esc>:cc<CR>
-nmap <S-Up> <Esc>:cp<CR>
-nmap <S-Down> <Esc>:cn<CR>
-nmap <S-Left> <Esc>:cold<CR>
-nmap <S-Right> <Esc>:cnew<CR>
+nmap <S-F12> :copen<CR>
+nmap <S-F11> :cclose<CR>
+nmap <S-CR> :cc<CR>
+nmap <S-Up> :cp<CR>
+nmap <S-Down> :cn<CR>
+nmap <S-Left> :cold<CR>
+nmap <S-Right> :cnew<CR>
 
 " minibufexplorer {{{1
 let g:miniBufExplorerMoreThanOne=10000
@@ -138,5 +138,5 @@ colors vividchalk
 set background=dark
 
 " MyIDE {{{1
-map <F12> <Esc>:copen<CR><ESC>:NERDTreeToggle<CR><ESC>:TagbarToggle<CR><ESC><C-h>
-map <C-\> <Esc>:!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
+map <F12> :copen<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>h
+map <C-\> :!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
