@@ -40,7 +40,7 @@ let Tlist_WinWidth = 45
 let Tlist_Show_One_File = 1
 
 " Rebuild tags {{{1
-nmap <F5> <Esc>:!uptag<Cr><Esc>:cs r<CR>
+nmap <F5> :!uptag<CR>:cs r<CR>
 
 " CVS {{{1
 let CVSCommandEdit='split'
@@ -113,15 +113,15 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " NERD Tree {{{1
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize = 45
-map <F8> <ESC>:NERDTreeToggle<CR>
-map <F2> <ESC>cd<ESC>:cs r<CR>
+map <F8> :NERDTreeToggle<CR>
+map <F2> cd:cs r<CR>
 
 " Tagbar {{{1
 let g:tagbar_left = 1
 let g:tagbar_expand = 1
 let g:tagbar_width = 45
 highlight link TagbarSignature helpNote
-map <F7> <ESC>:TagbarToggle<CR>
+map <F7> :TagbarToggle<CR>
 
 " powerline {{{1
 let g:Powerline_symbols = 'fancy'
