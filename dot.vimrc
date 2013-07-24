@@ -89,6 +89,7 @@ nmap <S-Up> :cp<CR>
 nmap <S-Down> :cn<CR>
 nmap <S-Left> :cold<CR>
 nmap <S-Right> :cnew<CR>
+nmap <C-MiddleMouse> <LeftMouse>:cs find s <C-R>=expand("<cword>")<CR><CR>
 
 " minibufexplorer {{{1
 let g:miniBufExplorerMoreThanOne=10000
