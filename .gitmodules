@@ -40,3 +40,6 @@
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki
+[submodule "bundle/calendar"]
+	path = bundle/calendar
+	url = https://github.com/vim-scripts/calendar.vim--Matsumoto
