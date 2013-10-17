@@ -144,6 +144,6 @@ map <F12> :copen<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>h
 map <C-\> :!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
 
 " vimwiki {{{1
-let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/public_html/'}]
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/public_html/', 'diary_rel_path' : ''}]
 nmap <leader>t <Plug>VimwikiToggleListItem
 au FileType vimwiki set sw=2 et
