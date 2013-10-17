@@ -32,6 +32,7 @@ au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
 " Pathogen {{{1
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
+silent! execute pathogen#helptags()
 
 " TagList {{{1
 nnoremap <silent> <F11> :Tlist<CR>
@@ -141,3 +142,8 @@ set background=dark
 " MyIDE {{{1
 map <F12> :copen<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>h
 map <C-\> :!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
+
+" vimwiki {{{1
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/public_html/'}]
+nmap <leader>t <Plug>VimwikiToggleListItem
+au FileType vimwiki set sw=2 et

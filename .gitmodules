@@ -43,3 +43,6 @@
 [submodule "bundle/calendar"]
 	path = bundle/calendar
 	url = https://github.com/vim-scripts/calendar.vim--Matsumoto
+[submodule "bundle/DrawIt"]
+	path = bundle/DrawIt
+	url = https://github.com/vim-scripts/DrawIt
