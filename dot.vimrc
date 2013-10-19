@@ -152,6 +152,7 @@ let g:vimwiki_list = [{
  \ 'template_path': '~/Documents/vimwiki/templates/',
  \ 'template_default': 'default',
  \ 'template_ext': '.html',
+ \ 'auto_export': 1,
  \ 'nested_syntaxes': {'python': 'python', 'bash': 'sh', 'c++': 'cpp'}
  \ }]
 nmap <leader>t <Plug>VimwikiToggleListItem
