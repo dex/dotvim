@@ -115,6 +115,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " NERD Tree {{{1
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize = 45
+let g:NERDTreeShowBookmarks = 1
 map <F8> :NERDTreeToggle<CR>
 map <F2> cd:cs r<CR>
 
@@ -144,6 +145,14 @@ map <F12> :copen<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>h
 map <C-\> :!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
 
 " vimwiki {{{1
-let g:vimwiki_list = [{'path': '~/Documents/vimwiki/', 'path_html': '~/public_html/', 'diary_rel_path' : ''}]
+let g:vimwiki_list = [{
+ \ 'path': '~/Documents/vimwiki/',
+ \ 'path_html': '~/public_html/',
+ \ 'diary_rel_path' : '',
+ \ 'template_path': '~/Documents/vimwiki/templates/',
+ \ 'template_default': 'default',
+ \ 'template_ext': '.html',
+ \ 'nested_syntaxes': {'python': 'python', 'bash': 'sh', 'c++': 'cpp'}
+ \ }]
 nmap <leader>t <Plug>VimwikiToggleListItem
-au FileType vimwiki set sw=2 et
+au FileType vimwiki set sw=2 et foldmethod=''
