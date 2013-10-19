@@ -155,4 +155,4 @@ let g:vimwiki_list = [{
  \ 'nested_syntaxes': {'python': 'python', 'bash': 'sh', 'c++': 'cpp'}
  \ }]
 nmap <leader>t <Plug>VimwikiToggleListItem
-au FileType vimwiki set sw=2 et foldmethod=''
+au FileType vimwiki set sw=2 et foldmethod=manual
