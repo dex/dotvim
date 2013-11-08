@@ -1,11 +1,11 @@
 #!/bin/sh
 
 case "$1" in
-	"sync")
+	"update")
 		git pull
 		git submodule update --init
 		;;
-	"update")
+	"upgrade")
 		git submodule foreach git pull origin master
 		;;
 esac
