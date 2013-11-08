@@ -115,7 +115,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " NERD Tree {{{1
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize = 45
-let g:NERDTreeShowBookmarks = 1
+"let g:NERDTreeShowBookmarks = 1
 map <F8> :NERDTreeToggle<CR>
 map <F2> cd:cs r<CR>
 
@@ -133,7 +133,8 @@ set laststatus=2
 
 " CtrlP {{{1
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'exe "CtrlP".get(["", "BookmarkDir", "Buffer", "MRU"], v:count)'
 let g:ctrlp_working_path_mode = '0'
 
 "ColorSchema {{{1
