@@ -41,7 +41,7 @@ let Tlist_WinWidth = 45
 let Tlist_Show_One_File = 1
 
 " Rebuild tags {{{1
-nmap <F5> :!uptag<CR>:cs r<CR>
+nmap <F5> :!uptag<CR>
 
 " CVS {{{1
 let CVSCommandEdit='split'
@@ -76,11 +76,11 @@ function! LoadCscope()
 	let db = findfile("cscope.out", ".;")
 	if (!empty(db))
 		let path = strpart(db, 0, match(db, "/cscope.out$"))
-		if (!empty(path))
-			let path = "/" . path
+		if (path[0] != '/')
+			let path = getcwd() . '/' . path
 		endif
 		set nocscopeverbose " suppress 'duplicate connection' error
-		exe "cs add " . db . " " . getcwd() . path
+		exe "cs add " . db . " " . path
 		set cscopeverbose
 	endif
 endfunction
