@@ -1,9 +1,9 @@
 set guioptions-=m  "Disable menu
 set guioptions-=T  "Disable toolbar
-set guifont=Inconsolata\ 12
-"set guifont=Monospace\ 11
-map <F3> <ESC>:set guifont=Inconsolata\ 11<CR>
-map <F4> <ESC>:set guifont=Inconsolata\ 12<CR>
+"set guifont=Inconsolata\ 12
+set guifont=Consolas\ 11
+"map <F3> <ESC>:set guifont=Inconsolata\ 11<CR>
+"map <F4> <ESC>:set guifont=Inconsolata\ 12<CR>
 
 " Set the color schema
 "let g:solarized_contrast="high"    	"default value is normal
