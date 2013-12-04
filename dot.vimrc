@@ -13,6 +13,8 @@ syntax on
 highlight Search term=reverse ctermbg=4 ctermfg=7
 filetype indent on
 filetype plugin on
+"set listchars=tab:>-,trail:-,eol:$,nbsp:%,extends:>,precedes:<
+"set showbreak=↪
 
 " encodings {{{1
 set fileencoding=utf-8
@@ -149,6 +151,7 @@ let g:ctrlp_map = '<c-p>'
 "let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_cmd = 'exe "CtrlP".get(["", "BookmarkDir", "Buffer", "MRU"], v:count)'
 let g:ctrlp_working_path_mode = '0'
+let g:ctrlp_max_files = 0
 
 "ColorSchema {{{1
 colors vividchalk
