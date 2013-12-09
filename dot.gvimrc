@@ -1,16 +1,17 @@
 set guioptions-=m  "Disable menu
 set guioptions-=T  "Disable toolbar
 "set guifont=Inconsolata\ 12
-set guifont=Consolas\ 11
+"set guifont=Consolas\ 11
+set guifont=Monaco\ 10
 "map <F3> <ESC>:set guifont=Inconsolata\ 11<CR>
 "map <F4> <ESC>:set guifont=Inconsolata\ 12<CR>
 
 " Set the color schema
-"let g:solarized_contrast="high"    	"default value is normal
-"let g:solarized_visibility="high"    	"default value is normal
-"let g:solarized_hitrail=1    		"default value is 0
-"set background=dark
-"colors solarized
+let g:solarized_contrast="high"    	"default value is normal
+let g:solarized_visibility="high"    	"default value is normal
+let g:solarized_hitrail=1    		"default value is 0
+set background=dark
+colors solarized
 "colors torte
 "colors desert
 
