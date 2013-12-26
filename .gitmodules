@@ -78,7 +78,7 @@
 	path = bundle/tslime.vim
 	url = https://github.com/kikijump/tslime.vim
 	ignore = dirty
-[submodule "bundle/OmniCppComplete"]
-	path = bundle/OmniCppComplete
-	url = https://github.com/vim-scripts/OmniCppComplete.git
+[submodule "bundle/clang-complete"]
+	path = bundle/clang-complete
+	url = https://github.com/vim-scripts/clang-complete
 	ignore = dirty

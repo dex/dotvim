@@ -116,7 +116,7 @@ let g:miniBufExplModSelTarget = 1
 
 " acp {{{1
 "let g:acp_behaviorSnipmateLength=1
-let g:acp_completeOption = '.,w,b,u,t,i,k'
+let g:acp_completeOption = '.,w,b,u,t,i,k,d'
 
 " highlight column 79 {{{1
 "highlight col79 ctermbg=red
