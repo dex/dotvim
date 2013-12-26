@@ -118,6 +118,10 @@ let g:miniBufExplModSelTarget = 1
 "let g:acp_behaviorSnipmateLength=1
 let g:acp_completeOption = '.,w,b,u,t,i,k,d'
 
+" clang-complete {{{1
+let g:clang_user_options='|| exit 0'
+let g:clang_auto_select=1
+
 " highlight column 79 {{{1
 "highlight col79 ctermbg=red
 "match col79 /\%<80v.\%>79v/
