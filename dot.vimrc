@@ -132,7 +132,7 @@ let g:NERDTreeWinPos = "right"
 let g:NERDTreeWinSize = 45
 "let g:NERDTreeShowBookmarks = 1
 map <F8> :NERDTreeToggle<CR>
-map <F2> cd:cs r<CR>
+map <F2> cd<F5>Pcd:cs r<CR>
 
 " Tagbar {{{1
 let g:tagbar_left = 1
