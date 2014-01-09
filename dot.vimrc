@@ -140,18 +140,18 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " NERD Tree {{{1
-let g:NERDTreeWinPos = "right"
-let g:NERDTreeWinSize = 45
+let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinSize = 35
 "let g:NERDTreeShowBookmarks = 1
-map <F8> :NERDTreeToggle<CR>
+map <F7> :NERDTreeToggle<CR>
 map <F2> cd<F5>Pcd:cs r<CR>
 
 " Tagbar {{{1
-let g:tagbar_left = 1
+let g:tagbar_left = 0
 let g:tagbar_expand = 1
-let g:tagbar_width = 45
+let g:tagbar_width = 35
 highlight link TagbarSignature helpNote
-map <F7> :TagbarToggle<CR>
+map <F8> :TagbarToggle<CR>
 
 " powerline {{{1
 let g:Powerline_symbols = 'fancy'
@@ -170,7 +170,7 @@ colors vividchalk
 set background=dark
 
 " MyIDE {{{1
-map <F12> :copen<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>h
+map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>h
 map <C-\> :!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
 
 " vimwiki {{{1
