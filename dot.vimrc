@@ -28,6 +28,14 @@ set termencoding=utf-8
 au BufRead,BufNewFile *.py set ts=4 sw=4 et
 au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
 
+" Co-existed with tmux {{{1
+if &term =~ '^screen'
+	execute "set <xUp>=\e[1;*A"
+	execute "set <xDown>=\e[1;*B"
+	execute "set <xRight>=\e[1;*C"
+	execute "set <xLeft>=\e[1;*D"
+endif
+
 " jQuery syntax {{{1
 "au BufRead,BufNewFile *.js set ft=javascript.jquery
 

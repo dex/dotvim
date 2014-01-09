@@ -82,3 +82,7 @@
 	path = bundle/clang-complete
 	url = https://github.com/vim-scripts/clang-complete
 	ignore = dirty
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
+	ignore = dirty
