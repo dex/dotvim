@@ -15,8 +15,8 @@ colors solarized
 "colors torte
 "colors desert
 
-set columns=160
-set lines=66
+set columns=140
+set lines=50
 set number
 set cursorline
 "highlight col79 guibg=red
