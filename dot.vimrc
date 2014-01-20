@@ -166,11 +166,12 @@ let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_max_files = 0
 
 "ColorSchema {{{1
-colors vividchalk
+"colors vividchalk
+colors molokai
 set background=dark
 
 " MyIDE {{{1
-map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>h
+map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>l
 map <C-\> :!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
 
 " vimwiki {{{1
