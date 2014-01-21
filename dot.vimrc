@@ -153,10 +153,21 @@ let g:tagbar_width = 35
 highlight link TagbarSignature helpNote
 map <F8> :TagbarToggle<CR>
 
-" powerline {{{1
-let g:Powerline_symbols = 'fancy'
+" airline {{{1
 set t_Co=256
 set laststatus=2
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+" old vim-powerline symbols
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
 
 " CtrlP {{{1
 let g:ctrlp_map = '<c-p>'
