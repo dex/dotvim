@@ -181,6 +181,10 @@ let g:ctrlp_max_files = 0
 colors molokai
 set background=dark
 
+"Vimux {{{1
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vp :VimuxPromptCommand<CR>
+
 " MyIDE {{{1
 map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>l
 map <C-\> :!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
