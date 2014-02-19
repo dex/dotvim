@@ -182,8 +182,8 @@ colors molokai
 set background=dark
 
 "Vimux {{{1
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>\l :VimuxRunLastCommand<CR>
+map <Leader>\p :VimuxPromptCommand<CR>
 
 " MyIDE {{{1
 map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>l
