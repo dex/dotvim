@@ -92,3 +92,6 @@
 	path = bundle/vimux
 	url = https://github.com/benmills/vimux
 	ignore = dirty
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets
