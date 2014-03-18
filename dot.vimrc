@@ -140,29 +140,32 @@ nmap <S-Left> :cold<CR>
 nmap <S-Right> :cnew<CR>
 nmap <C-MiddleMouse> <LeftMouse>:cs find s <C-R>=expand("<cword>")<CR><CR>
 
-" minibufexplorer {{{1
-let g:miniBufExplorerMoreThanOne=10000
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
-
-" acp {{{1
-"let g:acp_behaviorSnipmateLength=1
-let g:acp_completeOption = '.,w,b,u,t,i,k,d'
-
-" clang-complete {{{1
-let g:clang_user_options='|| exit 0'
-let g:clang_auto_select=1
-
 " highlight column 79 {{{1
 "highlight col79 ctermbg=red
 "match col79 /\%<80v.\%>79v/
 
 " ultisnips {{{1
-let g:UltiSnipsExpandTrigger="<tab>"
+" Trigger configuration. Do not use <tab> if you use YouCompleteMe.
+"let g:UltiSnipsExpandTrigger="<c-tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+function! g:UltiSnips_Complete()
+    call UltiSnips#ExpandSnippet()
+    if g:ulti_expand_res == 0
+	if pumvisible()
+	    return "\<C-n>"
+	else
+	    call UltiSnips_JumpForwards()
+	    if g:ulti_jump_forwards_res == 0
+		return "\<TAB>"
+	    endif
+	endif
+    endif
+    return ""
+endfunction
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsListSnippets="<c-e>"
 
 " NERD Tree {{{1
 let g:NERDTreeWinPos = "left"
