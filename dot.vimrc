@@ -7,12 +7,9 @@ set smarttab
 set enc=taiwan
 set fileencoding=taiwan
 set hls                
-set nocompatible
 set ruler
 syntax on
 highlight Search term=reverse ctermbg=4 ctermfg=7
-filetype indent on
-filetype plugin on
 "set listchars=tab:>-,trail:-,eol:$,nbsp:%,extends:>,precedes:<
 "set showbreak=↪
 
@@ -39,10 +36,38 @@ endif
 " jQuery syntax {{{1
 "au BufRead,BufNewFile *.js set ft=javascript.jquery
 
-" Pathogen {{{1
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-silent! execute pathogen#helptags()
+" Vundle {{{1
+set nocompatible	" be iMproved, required
+filetype off		" required
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+Bundle 'SirVer/ultisnips'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'kien/ctrlp.vim.git'
+Bundle 'tpope/vim-surround.git'
+Bundle 'tpope/vim-vividchalk.git'
+Bundle 'vimwiki/vimwiki'
+Bundle 'vim-scripts/calendar.vim--Matsumoto'
+Bundle 'vim-scripts/DrawIt'
+Bundle 'drmikehenry/vim-fontsize.git'
+Bundle 'scrooloose/syntastic.git'
+Bundle 'vim-scripts/a.vim'
+Bundle 'godlygeek/tabular.git'
+Bundle 'tomasr/molokai'
+Bundle 'bling/vim-airline'
+Bundle 'mileszs/ack.vim'
+Bundle 'benmills/vimux'
+Bundle 'honza/vim-snippets'
+Bundle 'Valloric/YouCompleteMe'
+
+filetype plugin indent on "required
 
 " TagList {{{1
 nnoremap <silent> <F11> :Tlist<CR>
