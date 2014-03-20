@@ -13,7 +13,7 @@ highlight Search term=reverse ctermbg=4 ctermfg=7
 "set listchars=tab:>-,trail:-,eol:$,nbsp:%,extends:>,precedes:<
 "set showbreak=↪
 
-" encodings {{{1
+" encodings
 set fileencoding=utf-8
 set fileencodings=utf-8,big5,ucs-bom,gbk,latin1
 "set ffs=unix,dos
@@ -21,11 +21,11 @@ set fileencodings=utf-8,big5,ucs-bom,gbk,latin1
 set encoding=utf-8
 set termencoding=utf-8
 
-" tab setup {{{1
+" tab setup
 au BufRead,BufNewFile *.py set ts=4 sw=4 et
 au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
 
-" Co-existed with tmux {{{1
+" Co-existed with tmux
 if &term =~ '^screen'
 	execute "set <xUp>=\e[1;*A"
 	execute "set <xDown>=\e[1;*B"
@@ -33,7 +33,7 @@ if &term =~ '^screen'
 	execute "set <xLeft>=\e[1;*D"
 endif
 
-" jQuery syntax {{{1
+" jQuery syntax
 "au BufRead,BufNewFile *.js set ft=javascript.jquery
 
 " Vundle {{{1
@@ -69,28 +69,8 @@ Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on "required
 
-" TagList {{{1
-nnoremap <silent> <F11> :Tlist<CR>
-nnoremap <silent> <F9> :wincmd p<CR>
-let Tlist_WinWidth = 45
-let Tlist_Show_One_File = 1
-
 " Rebuild tags {{{1
 nmap <F5> :!uptag<CR>
-
-" CVS {{{1
-let CVSCommandEdit='split'
-"let CVSCommandDiffOpt='wbBup'
-let CVSCommandDiffOpt='up'
-
-" for PHP fold plugin {{{1
-"map <F5> <Esc>:EnableFastPHPFolds<Cr>
-"map <F6> <Esc>:EnablePHPFolds<Cr>
-"map <F7> <Esc>:DisablePHPFolds<Cr> 
-"let php_folding=0
-"source ~/.vim/plugin/phpfolding.vim 
-"set tags+=~/.vim/systags
-set completeopt=longest,menu
 
 " Set cscope {{{1
 if has("cscope")
@@ -140,10 +120,6 @@ nmap <S-Left> :cold<CR>
 nmap <S-Right> :cnew<CR>
 nmap <C-MiddleMouse> <LeftMouse>:cs find s <C-R>=expand("<cword>")<CR><CR>
 
-" highlight column 79 {{{1
-"highlight col79 ctermbg=red
-"match col79 /\%<80v.\%>79v/
-
 " ultisnips {{{1
 " Trigger configuration. Do not use <tab> if you use YouCompleteMe.
 "let g:UltiSnipsExpandTrigger="<c-tab>"
@@ -166,6 +142,7 @@ endfunction
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-e>"
+set completeopt=longest,menu
 
 " NERD Tree {{{1
 let g:NERDTreeWinPos = "left"
