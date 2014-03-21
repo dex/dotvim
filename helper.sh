@@ -10,7 +10,7 @@ case "$1" in
 	    vim +BundleInstall +qall
 	fi
 	;;
-    "upgrade")
+    "upgrade"|"update")
 	vim +BundleUpdate +qall
 	;;
 esac
