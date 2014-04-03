@@ -15,8 +15,8 @@ set guifont=Monaco\ 10
 "colors torte
 "colors desert
 
-set columns=140
-set lines=50
+"set columns=140
+"set lines=50
 set number
 set cursorline
 "highlight col79 guibg=red
