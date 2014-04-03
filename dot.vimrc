@@ -196,7 +196,7 @@ map <Leader>\p :VimuxPromptCommand<CR>
 map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>l
 map <C-\> :!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
 function! OpenIDE(proj)
-	if &term == "bulitin_gui"
+	if &term == "builtin_gui"
 		set columns=140
 		set lines=50
 	endif
