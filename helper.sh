@@ -7,10 +7,10 @@ case "$1" in
 	fi
 	if [ ! -d bundle/vundle ]; then
 	    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-	    vim +BundleInstall +qall
+	    vim +PluginInstall +qall
 	fi
 	;;
     "upgrade"|"update")
-	vim +BundleUpdate +qall
+	vim +PluginUpdate +qall
 	;;
 esac
