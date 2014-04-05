@@ -203,6 +203,7 @@ function! OpenIDE(proj)
 	execute "normal 1\<C-P>".a:proj."\<C-X>\<F12>"
 endfunction
 command -nargs=1 Ide call OpenIDE(<f-args>)
+command -nargs=1 Proj call OpenIDE(<f-args>)
 
 " vimwiki {{{1
 let g:vimwiki_list = [{
