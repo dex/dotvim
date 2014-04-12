@@ -66,6 +66,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'benmills/vimux'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'dex/p4.vim'
 
 filetype plugin indent on "required
 
@@ -194,7 +195,6 @@ map <Leader>\p :VimuxPromptCommand<CR>
 
 " MyIDE {{{1
 map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>l
-map <C-\> :!cl <C-R>=fnameescape(expand("<cWORD>"))<CR><CR>
 function! OpenIDE(proj)
 	if &term == "builtin_gui"
 		set columns=140
