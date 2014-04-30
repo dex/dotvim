@@ -71,9 +71,6 @@ Plugin 'dex/p4.vim'
 
 filetype plugin indent on "required
 
-" File Types
-au BufRead,BufNewFile *.md set ft=markdown
-
 " Rebuild tags {{{1
 nmap <F5> :!uptag<CR>
 
@@ -223,3 +220,7 @@ let g:vimwiki_list = [{
  \ }]
 nmap <leader>t <Plug>VimwikiToggleListItem
 au FileType vimwiki set sw=2 et foldmethod=manual
+
+" Jekyll {{{1
+au BufRead,BufNewFile *.md set ft=markdown
+let g:jekyll_path = "~/Develop/dex.github.io"
