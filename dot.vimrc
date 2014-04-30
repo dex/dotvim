@@ -66,9 +66,13 @@ Plugin 'mileszs/ack.vim'
 Plugin 'benmills/vimux'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'csexton/jekyll.vim'
 Plugin 'dex/p4.vim'
 
 filetype plugin indent on "required
+
+" File Types
+au BufRead,BufNewFile *.md set ft=markdown
 
 " Rebuild tags {{{1
 nmap <F5> :!uptag<CR>
