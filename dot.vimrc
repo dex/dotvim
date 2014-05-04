@@ -224,3 +224,7 @@ au FileType vimwiki set sw=2 et foldmethod=manual
 " Jekyll {{{1
 au BufRead,BufNewFile *.md set ft=markdown
 let g:jekyll_path = "~/Develop/dex.github.io"
+let g:jekyll_post_suffix = "md"
+let g:jekyll_post_published = "false"
+let g:jekyll_prompt_tags = "true"
+let g:jekyll_prompt_categories = "true"
