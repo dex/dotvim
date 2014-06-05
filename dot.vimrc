@@ -227,3 +227,6 @@ let g:jekyll_path = "~/Develop/dex.github.io"
 let g:jekyll_post_suffix = "md"
 let g:jekyll_prompt_tags = "true"
 let g:jekyll_prompt_categories = "true"
+
+" p4.vim {{{1
+let g:P4UseTab = 1
