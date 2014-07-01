@@ -69,6 +69,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'csexton/jekyll.vim'
 Plugin 'dex/p4.vim'
 
+Plugin 'bitc/lushtags'
+Plugin 'lukerandall/haskellmode-vim'
+Plugin 'kana/vim-filetype-haskell'
+
 filetype plugin indent on "required
 
 " Rebuild tags {{{1
@@ -230,3 +234,7 @@ let g:jekyll_prompt_categories = "true"
 
 " p4.vim {{{1
 let g:P4UseTab = 1
+
+" Haskell mode  {{{1
+au BufEnter *.hs compiler ghc
+let g:haddock_browser="/usr/bin/google-chrome"
