@@ -72,6 +72,8 @@ Plugin 'dex/p4.vim'
 Plugin 'bitc/lushtags'
 Plugin 'lukerandall/haskellmode-vim'
 Plugin 'kana/vim-filetype-haskell'
+Plugin 'Twinside/vim-haskellFold'
+Plugin 'Twinside/vim-hoogle'
 
 filetype plugin indent on "required
 
