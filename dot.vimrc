@@ -40,6 +40,7 @@ Plugin 'lukerandall/haskellmode-vim'
 Plugin 'kana/vim-filetype-haskell'
 Plugin 'Twinside/vim-haskellFold'
 Plugin 'Twinside/vim-hoogle'
+Plugin 'eagletmt/neco-ghc'
 " {My Plugin}
 Plugin 'dex/p4.vim'
 
@@ -244,3 +245,12 @@ let g:P4UseTab = 1
 " [ Haskell mode ] {{{1
 au BufEnter *.hs compiler ghc
 let g:haddock_browser="/usr/bin/google-chrome"
+let g:haskellmode_completion_ghc=0
+let g:haskellmode_completion_haddock=0
+
+" [ YCM ] {{{1
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
+
+" [ neco-ghc ] {{{1
+au BufRead,BufNewFile *.hs setlocal omnifunc=necoghc#omnifunc
+let g:necoghc_enable_detailed_browse = 1
