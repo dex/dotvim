@@ -1,4 +1,52 @@
-" Genernal setting {{{1
+" [ Vundle ] {{{1
+set nocompatible	" be iMproved, required
+filetype off		" required
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+
+" let Vundle manage Vundle
+" required!
+Plugin 'gmarik/vundle'
+" {Addon}
+Plugin 'vimwiki/vimwiki'
+Plugin 'calendar.vim--Matsumoto'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'majutsushi/tagbar'
+Plugin 'benmills/vimux'
+Plugin 'csexton/jekyll.vim'
+Plugin 'bling/vim-airline'
+" {Look and Feel}
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-vividchalk.git'
+Plugin 'drmikehenry/vim-fontsize.git'
+Plugin 'tomasr/molokai'
+" {Programming}
+Plugin 'a.vim'
+Plugin 'godlygeek/tabular.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/syntastic.git'
+" {Formating}
+Plugin 'DrawIt'
+" {Auto-completion}
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/YouCompleteMe'
+" {Haskell}
+Plugin 'bitc/lushtags'
+Plugin 'lukerandall/haskellmode-vim'
+Plugin 'kana/vim-filetype-haskell'
+Plugin 'Twinside/vim-haskellFold'
+Plugin 'Twinside/vim-hoogle'
+" {My Plugin}
+Plugin 'dex/p4.vim'
+
+call vundle#end()		"required
+filetype plugin indent on	"required
+
+" [ Genernal setting ] {{{1
 set foldmethod=marker
 set autoindent
 set cindent
@@ -6,7 +54,7 @@ set cinoptions=(0
 set smarttab
 set enc=taiwan
 set fileencoding=taiwan
-set hls                
+set hls
 set ruler
 syntax on
 highlight Search term=reverse ctermbg=4 ctermfg=7
@@ -33,54 +81,10 @@ if &term =~ '^screen'
 	execute "set <xLeft>=\e[1;*D"
 endif
 
-" jQuery syntax
-"au BufRead,BufNewFile *.js set ft=javascript.jquery
-
-" Vundle {{{1
-set nocompatible	" be iMproved, required
-filetype off		" required
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
-Plugin 'gmarik/vundle'
-Plugin 'SirVer/ultisnips'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'kien/ctrlp.vim.git'
-Plugin 'tpope/vim-surround.git'
-Plugin 'tpope/vim-vividchalk.git'
-Plugin 'vimwiki/vimwiki'
-Plugin 'calendar.vim--Matsumoto'
-Plugin 'DrawIt'
-Plugin 'drmikehenry/vim-fontsize.git'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'a.vim'
-Plugin 'godlygeek/tabular.git'
-Plugin 'tomasr/molokai'
-Plugin 'bling/vim-airline'
-Plugin 'mileszs/ack.vim'
-Plugin 'benmills/vimux'
-Plugin 'honza/vim-snippets'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'csexton/jekyll.vim'
-Plugin 'dex/p4.vim'
-
-Plugin 'bitc/lushtags'
-Plugin 'lukerandall/haskellmode-vim'
-Plugin 'kana/vim-filetype-haskell'
-Plugin 'Twinside/vim-haskellFold'
-Plugin 'Twinside/vim-hoogle'
-
-filetype plugin indent on "required
-
-" Rebuild tags {{{1
+" [ Rebuild tags ] {{{1
 nmap <F5> :!uptag<CR>
 
-" Set cscope {{{1
+" [ Cscope ] {{{1
 if has("cscope")
 	set csprg=/usr/bin/cscope
 	set csto=0
@@ -128,7 +132,7 @@ nmap <S-Left> :cold<CR>
 nmap <S-Right> :cnew<CR>
 nmap <C-MiddleMouse> <LeftMouse>:cs find s <C-R>=expand("<cword>")<CR><CR>
 
-" ultisnips {{{1
+" [ ultisnips ] {{{1
 " Trigger configuration. Do not use <tab> if you use YouCompleteMe.
 "let g:UltiSnipsExpandTrigger="<c-tab>"
 "let g:UltiSnipsJumpForwardTrigger="<c-tab>"
@@ -152,21 +156,21 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-e>"
 set completeopt=longest,menu
 
-" NERD Tree {{{1
+" [ NERD Tree ] {{{1
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize = 35
 "let g:NERDTreeShowBookmarks = 1
 map <F7> :NERDTreeToggle<CR>
 map <F2> cd<F5>Pcd:cs r<CR>
 
-" Tagbar {{{1
+" [ Tagbar ] {{{1
 let g:tagbar_left = 0
 let g:tagbar_expand = 1
 let g:tagbar_width = 35
 highlight link TagbarSignature helpNote
 map <F8> :TagbarToggle<CR>
 
-" airline {{{1
+" [ airline ] {{{1
 set t_Co=256
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -182,7 +186,7 @@ let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 
-" CtrlP {{{1
+" [ CtrlP ] {{{1
 let g:ctrlp_map = '<c-p>'
 "let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_cmd = 'exe "CtrlP".get(["", "BookmarkDir", "Buffer", "MRU"], v:count)'
@@ -190,18 +194,18 @@ let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_max_files = 0
 let g:ctrlp_clear_cache_on_exit = 0
 
-"ColorSchema {{{1
+" [ ColorSchema ] {{{1
 "colors vividchalk
 colors molokai
 set background=dark
 
-"Vimux {{{1
+" [ Vimux ] {{{1
 map <Leader>\a :VimuxRunLastCommand<CR>
 map <Leader>\l :VimuxRunLastCommand<CR>
 map <Leader>\r :VimuxPromptCommand<CR>
 map <Leader>\p :VimuxPromptCommand<CR>
 
-" MyIDE {{{1
+" [ MyIDE ] {{{1
 map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>l
 function! OpenIDE(proj)
 	if &term == "builtin_gui"
@@ -213,7 +217,7 @@ endfunction
 command -nargs=1 Ide call OpenIDE(<f-args>)
 command -nargs=1 Proj call OpenIDE(<f-args>)
 
-" vimwiki {{{1
+" [ vimwiki ] {{{1
 let g:vimwiki_list = [{
  \ 'path': '~/Documents/vimwiki/',
  \ 'path_html': '~/public_html/',
@@ -227,16 +231,16 @@ let g:vimwiki_list = [{
 nmap <leader>t <Plug>VimwikiToggleListItem
 au FileType vimwiki set sw=2 et foldmethod=manual
 
-" Jekyll {{{1
+" [ Jekyll ] {{{1
 au BufRead,BufNewFile *.md set ft=markdown
 let g:jekyll_path = "~/Develop/dex.github.io"
 let g:jekyll_post_suffix = "md"
 let g:jekyll_prompt_tags = "true"
 let g:jekyll_prompt_categories = "true"
 
-" p4.vim {{{1
+" [ p4.vim ] {{{1
 let g:P4UseTab = 1
 
-" Haskell mode  {{{1
+" [ Haskell mode ] {{{1
 au BufEnter *.hs compiler ghc
 let g:haddock_browser="/usr/bin/google-chrome"
