@@ -247,7 +247,7 @@ au BufEnter *.hs compiler ghc
 let g:haddock_browser="/usr/bin/google-chrome"
 let g:haskellmode_completion_ghc=0
 let g:haskellmode_completion_haddock=0
-let g:haddock_indexfiledir="/home/dex/.vim/"
+let g:haddock_indexfiledir=$HOME."/.vim/"
 
 " [ YCM ] {{{1
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
