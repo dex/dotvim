@@ -166,9 +166,12 @@ map <F2> cd<F5>Pcd:cs r<CR>
 function! TryNTFind()
 	if exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 		silent! NERDTreeFind
+		exec bufwinnr(t:NERDTreeBufName)."wincmd w"
+		exec "normal zz"
+		wincmd p
 	endif
 endfunction
-autocmd BufWinEnter * call TryNTFind()
+autocmd BufWinEnter,WinEnter * call TryNTFind()
 
 " [ Tagbar ] {{{1
 let g:tagbar_left = 0
@@ -213,7 +216,7 @@ map <Leader>\r :VimuxPromptCommand<CR>
 map <Leader>\p :VimuxPromptCommand<CR>
 
 " [ MyIDE ] {{{1
-map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR><C-w>l
+map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR>2<C-w>w
 function! OpenIDE(proj)
 	if &term == "builtin_gui"
 		set columns=140
