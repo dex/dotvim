@@ -164,8 +164,8 @@ let g:NERDTreeWinSize = 35
 map <F7> :NERDTreeToggle<CR>
 map <F2> cd<F5>Pcd:cs r<CR>
 function! TryNTFind()
-	if exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-		silent! NERDTreeFind
+	if exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1) && empty(&buftype)
+		try | NERDTreeFind | catch | wincmd p | return | endtry
 		exec bufwinnr(t:NERDTreeBufName)."wincmd w"
 		exec "normal zz"
 		wincmd p
