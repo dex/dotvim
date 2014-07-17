@@ -163,6 +163,12 @@ let g:NERDTreeWinSize = 35
 "let g:NERDTreeShowBookmarks = 1
 map <F7> :NERDTreeToggle<CR>
 map <F2> cd<F5>Pcd:cs r<CR>
+function! TryNTFind()
+	if exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+		silent! NERDTreeFind
+	endif
+endfunction
+autocmd BufWinEnter * call TryNTFind()
 
 " [ Tagbar ] {{{1
 let g:tagbar_left = 0
