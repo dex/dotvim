@@ -11,6 +11,6 @@ case "$1" in
 	fi
 	;;
     "upgrade"|"update")
-	vim +PluginUpdate +qall
+	vim +PluginUpdate +"wincmd o" +"normal u"
 	;;
 esac
