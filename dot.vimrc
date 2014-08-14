@@ -203,6 +203,7 @@ let g:ctrlp_cmd = 'exe "CtrlP".get(["", "BookmarkDir", "Buffer", "MRU"], v:count
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_max_files = 0
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_custom_ignore = '\v[\/]buildroot[\/](tools|toolchain|build)$'
 
 " [ ColorSchema ] {{{1
 "colors vividchalk
