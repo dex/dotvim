@@ -1,5 +1,17 @@
 " [ Vundle ] {{{1
 set nocompatible	" be iMproved, required
+
+" Setting up Vundle - the vim plugin bundler
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+	echo "Installing Vundle..."
+	echo ""
+	silent !mkdir -p ~/.vim/bundle
+	silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	let iCanHazVundle=0
+endif
+
 filetype off		" required
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
@@ -45,6 +57,14 @@ Plugin 'eagletmt/neco-ghc'
 Plugin 'dex/p4.vim'
 
 call vundle#end()		"required
+
+" Install plugins the first time vim runs
+if iCanHazVundle == 0
+	echo "Installing Bundles, please ignore key map error messages"
+	echo ""
+	:PluginInstall
+endif
+
 filetype plugin indent on	"required
 
 " [ Genernal setting ] {{{1
@@ -169,10 +189,10 @@ function! TryNTFind()
 	elseif !empty(&buftype) 
 	elseif empty(bufname("%"))
 	else
-		try | NERDTreeFind | catch | wincmd p | return | endtry
-		exec bufwinnr(t:NERDTreeBufName)."wincmd w"
-		exec "normal zz"
-		wincmd p
+"		try | NERDTreeFind | catch | wincmd p | return | endtry
+"		exec bufwinnr(t:NERDTreeBufName)."wincmd w"
+"		exec "normal zz"
+"		wincmd p
 	endif
 endfunction
 autocmd BufWinEnter,WinEnter * call TryNTFind()
