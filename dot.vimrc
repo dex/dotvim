@@ -63,7 +63,6 @@ if iCanHazVundle == 0
 	echo "Installing Bundles, please ignore key map error messages"
 	echo ""
 	PluginInstall
-	finish
 endif
 
 filetype plugin indent on	"required
