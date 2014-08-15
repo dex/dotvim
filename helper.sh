@@ -2,13 +2,7 @@
 
 case "$1" in
     "install")
-	if [ ! -d bundle ]; then
-	    mkdir bundle
-	fi
-	if [ ! -d bundle/vundle ]; then
-	    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-	    vim +PluginInstall +qall
-	fi
+	exec vim
 	;;
     "upgrade"|"update")
 	vim +PluginUpdate +"wincmd o" +"normal u"
