@@ -62,7 +62,8 @@ call vundle#end()		"required
 if iCanHazVundle == 0
 	echo "Installing Bundles, please ignore key map error messages"
 	echo ""
-	:PluginInstall
+	PluginInstall
+	finish
 endif
 
 filetype plugin indent on	"required
@@ -189,10 +190,10 @@ function! TryNTFind()
 	elseif !empty(&buftype) 
 	elseif empty(bufname("%"))
 	else
-"		try | NERDTreeFind | catch | wincmd p | return | endtry
-"		exec bufwinnr(t:NERDTreeBufName)."wincmd w"
-"		exec "normal zz"
-"		wincmd p
+		try | NERDTreeFind | catch | wincmd p | return | endtry
+		exec bufwinnr(t:NERDTreeBufName)."wincmd w"
+		exec "normal zz"
+		wincmd p
 	endif
 endfunction
 autocmd BufWinEnter,WinEnter * call TryNTFind()
