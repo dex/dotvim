@@ -2,7 +2,7 @@
 
 case "$1" in
     "install")
-	exec vim
+	vim
 	;;
     "upgrade"|"update")
 	vim +PluginUpdate +"wincmd o" +"normal u"
