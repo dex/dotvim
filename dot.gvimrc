@@ -2,7 +2,11 @@ set guioptions-=m  "Disable menu
 set guioptions-=T  "Disable toolbar
 "set guifont=Inconsolata\ 12
 "set guifont=Consolas\ 11
-set guifont=Monaco\ 10
+if has("gui_macvim")
+	set guifont=Monaco:h12
+else
+	set guifont=Monaco\ 10
+endif
 "map <F3> <ESC>:set guifont=Inconsolata\ 11<CR>
 "map <F4> <ESC>:set guifont=Inconsolata\ 12<CR>
 
