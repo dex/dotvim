@@ -19,8 +19,8 @@ endif
 "colors torte
 "colors desert
 
-"set columns=140
-"set lines=50
+set columns=80
+set lines=24
 set number
 set cursorline
 "highlight col79 guibg=red
