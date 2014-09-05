@@ -124,9 +124,7 @@ function! LoadCscope()
 	let db = findfile("cscope.out", ".;")
 	if (!empty(db))
 		let path = strpart(db, 0, match(db, "/cscope.out$"))
-		if (empty(path))
-			let path = getcwd()
-		elseif (path[0] != '/')
+		if (!empty(path) && path[0] != '/')
 			let path = getcwd() . '/' . path
 		endif
 		set nocscopeverbose " suppress 'duplicate connection' error
