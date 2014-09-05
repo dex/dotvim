@@ -124,7 +124,9 @@ function! LoadCscope()
 	let db = findfile("cscope.out", ".;")
 	if (!empty(db))
 		let path = strpart(db, 0, match(db, "/cscope.out$"))
-		if (path[0] != '/')
+		if (empty(path))
+			let path = getcwd()
+		elseif (path[0] != '/')
 			let path = getcwd() . '/' . path
 		endif
 		set nocscopeverbose " suppress 'duplicate connection' error
@@ -132,7 +134,7 @@ function! LoadCscope()
 		set cscopeverbose
 	endif
 endfunction
-au BufEnter /* call LoadCscope()
+au BufEnter * call LoadCscope()
 nmap <Leader>\s :cs find s <C-R>=expand("<cword>")<CR><CR>
 nmap <Leader>\g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <Leader>\c :cs find c <C-R>=expand("<cword>")<CR><CR>
