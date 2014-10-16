@@ -107,7 +107,7 @@ nmap <F5> :!uptag<CR>
 
 " [ Cscope ] {{{1
 if has("cscope")
-	set csprg=/usr/bin/cscope
+	set csprg=cscope
 	set csto=0
 	set cst
 	set nocsverb
