@@ -239,6 +239,7 @@ map <Leader>\a :VimuxRunLastCommand<CR>
 map <Leader>\l :VimuxRunLastCommand<CR>
 map <Leader>\r :VimuxPromptCommand<CR>
 map <Leader>\p :VimuxPromptCommand<CR>
+map <Leader>\q :VimuxCloseRunner<CR>
 
 " [ MyIDE ] {{{1
 map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR>2<C-w>w
