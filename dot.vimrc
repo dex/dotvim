@@ -223,7 +223,7 @@ let g:airline_symbols.linenr = '⭡'
 " [ CtrlP ] {{{1
 let g:ctrlp_map = '<c-p>'
 "let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_cmd = 'exe "CtrlP".get(["", "BookmarkDir", "Buffer", "MRU", "Line"], v:count)'
+let g:ctrlp_cmd = 'exe "CtrlP".get(["", "BookmarkDir", "Buffer", "MRU", "BufTag"], v:count)'
 let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_max_files = 0
 let g:ctrlp_clear_cache_on_exit = 0
