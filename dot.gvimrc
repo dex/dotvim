@@ -6,7 +6,9 @@ if has("gui_macvim")
 	set guifont=Monaco:h12
 	set transparency=10
 else
-	set guifont=Monaco\ 10
+	"set guifont=Monaco\ 10
+	"set guifont=Menlo\ 10
+	set guifont=Inconsolata\ 12
 endif
 "map <F3> <ESC>:set guifont=Inconsolata\ 11<CR>
 "map <F4> <ESC>:set guifont=Inconsolata\ 12<CR>
