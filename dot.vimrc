@@ -32,6 +32,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-vividchalk.git'
 Plugin 'drmikehenry/vim-fontsize.git'
 Plugin 'tomasr/molokai'
+Plugin 'ekalinin/Dockerfile.vim'
 " {Programming}
 Plugin 'a.vim'
 Plugin 'godlygeek/tabular.git'
