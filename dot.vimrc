@@ -48,12 +48,12 @@ Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 " {Haskell}
-Plugin 'bitc/lushtags'
-Plugin 'lukerandall/haskellmode-vim'
-Plugin 'kana/vim-filetype-haskell'
-Plugin 'Twinside/vim-haskellFold'
-Plugin 'Twinside/vim-hoogle'
-Plugin 'eagletmt/neco-ghc'
+"Plugin 'bitc/lushtags'
+"Plugin 'lukerandall/haskellmode-vim'
+"Plugin 'kana/vim-filetype-haskell'
+"Plugin 'Twinside/vim-haskellFold'
+"Plugin 'Twinside/vim-hoogle'
+"Plugin 'eagletmt/neco-ghc'
 " {My Plugin}
 Plugin 'dex/p4.vim'
 
