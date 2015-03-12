@@ -234,6 +234,8 @@ let g:ctrlp_custom_ignore = '\v[\/]buildroot[\/](tools|toolchain|build)$'
 "colors vividchalk
 colors molokai
 set background=dark
+" Set background transparent for molokai theme
+hi Normal ctermfg=252 ctermbg=none guifg=#F8F8F2 guibg=#1B1D1E
 
 " [ Vimux ] {{{1
 map <Leader>\a :VimuxRunLastCommand<CR>
