@@ -251,10 +251,14 @@ function! OpenIDE(proj)
 		set columns=140
 		set lines=50
 	endif
-	execute "normal 1\<C-P>".a:proj."\<C-X>\<F12>"
+	if (a:proj != "")
+		execute "normal 1\<C-P>".a:proj."\<C-X>\<F12>"
+	else
+		execute "normal \<F12>"
+	endif
 endfunction
-command -nargs=1 Ide call OpenIDE(<f-args>)
-command -nargs=1 Proj call OpenIDE(<f-args>)
+command -nargs=? Ide call OpenIDE(<q-args>)
+command -nargs=? Proj call OpenIDE(<q-args>)
 
 " [ vimwiki ] {{{1
 let g:vimwiki_list = [{
