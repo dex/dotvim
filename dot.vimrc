@@ -292,7 +292,10 @@ let g:haskellmode_completion_haddock=0
 let g:haddock_indexfiledir=$HOME."/.vim/"
 
 " [ YCM ] {{{1
+"let g:ycm_key_list_select_completion = ['\<C-TAB>', '\<Down>']
+"let g:ycm_key_list_previous_completion = ['\<C-S-TAB>', '\<Up>']
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
+let g:ycm_confirm_extra_conf = 0
 
 " [ neco-ghc ] {{{1
 au BufRead,BufNewFile *.hs setlocal omnifunc=necoghc#omnifunc
