@@ -262,7 +262,7 @@ function! OpenIDE(proj)
 		execute "lcd ".a:proj
 		execute "normal \<F12>"
 	else
-		execute "normal 1\<C-P>".a:proj."\<C-X>\<F12>"
+		execute "normal 1\<C-P>".a:proj."\<C-V>\<F12>"
 	endif
 endfunction
 command -nargs=? -complete=file Ide call OpenIDE(<q-args>)
