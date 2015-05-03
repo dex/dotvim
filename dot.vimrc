@@ -252,10 +252,13 @@ function! OpenIDE(proj)
 		set columns=140
 		set lines=50
 	endif
-	if (a:proj != "")
-		execute "normal 1\<C-P>".a:proj."\<C-X>\<F12>"
-	else
+	if (a:proj == "")
 		execute "normal \<F12>"
+	elseif isdirectory(a:proj)
+		lcd a:proj
+		execute "normal \<F12>"
+	else
+		execute "normal 1\<C-P>".a:proj."\<C-X>\<F12>"
 	endif
 endfunction
 command -nargs=? Ide call OpenIDE(<q-args>)
