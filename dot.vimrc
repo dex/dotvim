@@ -78,7 +78,6 @@ set enc=taiwan
 set fileencoding=taiwan
 set hls
 set ruler
-set colorcolumn=80
 syntax on
 highlight Search term=reverse ctermbg=4 ctermfg=7
 "set listchars=tab:>-,trail:-,eol:$,nbsp:%,extends:>,precedes:<
@@ -95,6 +94,9 @@ set termencoding=utf-8
 " tab setup
 au BufRead,BufNewFile *.py set ts=4 sw=4 et
 au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
+
+" Set color column
+au BufRead,BufNewFile *.c,*.cc,*.h,*.py,*.vim set colorcolumn=80
 
 " Co-existed with tmux
 if &term =~ '^screen'
