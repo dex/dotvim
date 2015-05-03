@@ -78,6 +78,7 @@ set enc=taiwan
 set fileencoding=taiwan
 set hls
 set ruler
+set colorcolumn=80
 syntax on
 highlight Search term=reverse ctermbg=4 ctermfg=7
 "set listchars=tab:>-,trail:-,eol:$,nbsp:%,extends:>,precedes:<
