@@ -203,8 +203,8 @@ autocmd BufWinEnter,WinEnter * call TryNTFind()
 
 " [ Tagbar ] {{{1
 let g:tagbar_left = 0
-let g:tagbar_expand = 1
-let g:tagbar_width = 35
+"let g:tagbar_expand = 1
+"let g:tagbar_width = 35
 highlight link TagbarSignature helpNote
 map <F8> :TagbarToggle<CR>
 
@@ -252,7 +252,7 @@ let g:isResized=0
 map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR>2<C-w>w
 function! OpenIDE(proj)
 	if &term == "builtin_gui" && g:isResized == 0
-		set columns=140
+		set columns=175
 		set lines=50
 		let g:isResized=1
 	endif
