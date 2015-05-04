@@ -259,7 +259,7 @@ function! OpenIDE(proj)
 	if a:proj == ""
 		execute "normal \<F12>"
 	elseif isdirectory(a:proj)
-		execute "lcd ".a:proj
+		lcd `=a:proj`
 		execute "normal \<F12>"
 	else
 		execute "normal 1\<C-P>".a:proj."\<C-V>\<F12>"
