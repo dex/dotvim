@@ -96,7 +96,7 @@ au BufRead,BufNewFile *.py set ts=4 sw=4 et
 au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
 
 " Set color column
-au BufRead,BufNewFile *.c,*.cc,*.h,*.py,*.vim set colorcolumn=80
+au BufRead,BufNewFile *.c,*.cc,*.h,*.py,*.vim setlocal colorcolumn=80
 
 " Co-existed with tmux
 if &term =~ '^screen'
