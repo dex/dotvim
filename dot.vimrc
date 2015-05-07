@@ -96,7 +96,7 @@ au BufRead,BufNewFile *.py set ts=4 sw=4 et
 au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
 
 " Set color column
-au BufRead,BufNewFile *.c,*.cc,*.h,*.py,*.vim setlocal colorcolumn=80
+au FileType c,cpp,python,vim,sh setlocal colorcolumn=80
 
 " Co-existed with tmux
 if &term =~ '^screen'
@@ -309,7 +309,7 @@ let g:haddock_indexfiledir=$HOME."/.vim/"
 "let g:ycm_key_list_select_completion = ['\<C-TAB>', '\<Down>']
 "let g:ycm_key_list_previous_completion = ['\<C-S-TAB>', '\<Up>']
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_global_ycm_extra_conf = $HOME."/.vim/ycm_extra_conf.py"
 
 " [ neco-ghc ] {{{1
 au BufRead,BufNewFile *.hs setlocal omnifunc=necoghc#omnifunc
