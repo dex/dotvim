@@ -253,8 +253,10 @@ map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR>2<C-w>w
 function! OpenIDE(proj)
 	set cursorline
 	set number
-	set mouse=a
-	set ttymouse=sgr
+	if &term != "builtin_gui"
+		set mouse=a
+		set ttymouse=sgr
+	endif
 	if &term != "screen" && g:isResized == 0
 		set columns=175
 		set lines=50
