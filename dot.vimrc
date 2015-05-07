@@ -251,14 +251,12 @@ map <Leader>\q :VimuxCloseRunner<CR>
 let g:isResized=0
 map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR>2<C-w>w
 function! OpenIDE(proj)
-	if &term == "builtin_gui" || &term == "xterm"
-		if g:isResized == 0
-			set cursorline
-			set number
-			set columns=175
-			set lines=50
-			let g:isResized=1
-		endif
+	if &term != "screen" && g:isResized == 0
+		set cursorline
+		set number
+		set columns=175
+		set lines=50
+		let g:isResized=1
 	endif
 	if a:proj == ""
 		execute "normal \<F12>"
