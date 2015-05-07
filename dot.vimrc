@@ -310,6 +310,7 @@ let g:haddock_indexfiledir=$HOME."/.vim/"
 "let g:ycm_key_list_previous_completion = ['\<C-S-TAB>', '\<Up>']
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 let g:ycm_global_ycm_extra_conf = $HOME."/.vim/ycm_extra_conf.py"
+let g:ycm_extra_conf_vim_data=['getcwd()']
 
 " [ neco-ghc ] {{{1
 au BufRead,BufNewFile *.hs setlocal omnifunc=necoghc#omnifunc

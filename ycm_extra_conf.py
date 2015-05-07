@@ -66,9 +66,9 @@ flags = [
 # harmful
 #'/System/Library/Frameworks/Python.framework/Headers',
 #'-isystem',
-'../llvm/include',
-'-isystem',
-'../llvm/tools/clang/include',
+#'../llvm/include',
+#'-isystem',
+#'../llvm/tools/clang/include',
 '-I',
 '.',
 '-D_POSIX_SOURCE',
@@ -248,7 +248,7 @@ def GetCompilationInfoForFile( filename ):
   return database.GetCompilationInfoForFile( filename )
 
 
-def FlagsForFile( filename, **kwargs ):
+def FlagsForFile( filename, client_data, **kwargs ):
   if database:
     # Bear in mind that compilation_info.compiler_flags_ does NOT return a
     # python list, but a "list-like" StringVec object
@@ -269,7 +269,7 @@ def FlagsForFile( filename, **kwargs ):
     #  pass
   else:
     #relative_to = DirectoryOfThisScript()
-    relative_to = os.curdir
+    relative_to = client_data['getcwd()']
     final_flags = MakeRelativePathsInFlagsAbsolute( flags, relative_to )
 
   return {
