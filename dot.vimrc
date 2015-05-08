@@ -273,6 +273,9 @@ function! OpenIDE(proj)
 endfunction
 command -nargs=? -complete=file Ide call OpenIDE(<q-args>)
 command -nargs=? -complete=file Proj call OpenIDE(<q-args>)
+nmap <Leader>\[ :NERDTreeToggle<CR>
+nmap <Leader>\] :TagbarToggle<CR>
+nmap <Leader>\_ :copen 8<CR>
 
 " [ vimwiki ] {{{1
 let g:vimwiki_list = [{
