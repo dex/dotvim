@@ -31,8 +31,9 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-vividchalk.git'
 Plugin 'drmikehenry/vim-fontsize.git'
-Plugin 'tomasr/molokai'
+Plugin 'fatih/molokai'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'Matt-Deacalion/vim-systemd-syntax'
 " {Programming}
 Plugin 'a.vim'
 Plugin 'godlygeek/tabular.git'
@@ -54,6 +55,8 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'Twinside/vim-haskellFold'
 "Plugin 'Twinside/vim-hoogle'
 "Plugin 'eagletmt/neco-ghc'
+" {Go}
+Plugin 'fatih/vim-go'
 " {My Plugin}
 Plugin 'dex/p4.vim'
 
