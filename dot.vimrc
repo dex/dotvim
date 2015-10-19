@@ -99,7 +99,7 @@ au BufRead,BufNewFile *.py set ts=4 sw=4 et
 au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
 
 " Set color column
-au FileType c,cpp,python,vim,sh setlocal colorcolumn=80
+au FileType c,cpp,python,vim,sh,go setlocal colorcolumn=80
 
 " Co-existed with tmux
 if &term =~ '^screen'
@@ -252,7 +252,7 @@ map <Leader>\q :VimuxCloseRunner<CR>
 
 " [ MyIDE ] {{{1
 let g:isResized=0
-map <F12> :copen 8<CR>:NERDTreeToggle<CR>:TagbarToggle<CR>2<C-w>w
+map <F12> :NERDTreeToggle<CR>:TagbarToggle<CR>:copen 8<CR>2<C-w>w
 function! OpenIDE(proj)
 	set cursorline
 	set number
@@ -279,6 +279,7 @@ command -nargs=? -complete=file Proj call OpenIDE(<q-args>)
 nmap <Leader>\[ :NERDTreeToggle<CR>
 nmap <Leader>\] :TagbarToggle<CR>
 nmap <Leader>\_ :copen 8<CR>
+autocmd FileType qf wincmd J
 
 " [ vimwiki ] {{{1
 let g:vimwiki_list = [{
