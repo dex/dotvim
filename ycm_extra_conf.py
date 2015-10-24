@@ -174,6 +174,10 @@ flags = [
 'atheros/linux/driver/rudb',
 '-I',
 'atheros/linux/driver/madwifi',
+'-I',
+'include',
+'-I',
+'src/include',
 ]
 
 

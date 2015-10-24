@@ -109,6 +109,10 @@ if &term =~ '^screen'
 	execute "set <xLeft>=\e[1;*D"
 endif
 
+" list
+set list
+set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
+
 " [ Rebuild tags ] {{{1
 nmap <F5> :!uptag<CR>
 
