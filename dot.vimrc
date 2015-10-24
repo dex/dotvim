@@ -99,7 +99,7 @@ au BufRead,BufNewFile *.py set ts=4 sw=4 et
 au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
 
 " Set color column
-au FileType c,cpp,python,vim,sh,go setlocal colorcolumn=80
+au FileType c,cpp,python,vim,sh,go setlocal colorcolumn=80 list
 
 " Co-existed with tmux
 if &term =~ '^screen'
@@ -110,7 +110,7 @@ if &term =~ '^screen'
 endif
 
 " list
-set list
+"set list
 set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\ 
 
 " [ Rebuild tags ] {{{1
