@@ -3,45 +3,45 @@ set nocompatible	" be iMproved, required
 
 " Setting up Vundle - the vim plugin bundler
 let iCanHazVundle=1
-let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
 if !filereadable(vundle_readme)
 	echo "Installing Vundle..."
 	echo ""
 	silent !mkdir -p ~/.vim/bundle
-	silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+	silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	let iCanHazVundle=0
 endif
 
 filetype off		" required
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 " {Addon}
 Plugin 'vimwiki/vimwiki'
 Plugin 'calendar.vim--Matsumoto'
-Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'benmills/vimux'
 Plugin 'csexton/jekyll.vim'
 Plugin 'bling/vim-airline'
 " {Look and Feel}
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-vividchalk.git'
-Plugin 'drmikehenry/vim-fontsize.git'
+Plugin 'tpope/vim-vividchalk'
+Plugin 'drmikehenry/vim-fontsize'
 Plugin 'fatih/molokai'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 " {Programming}
 Plugin 'a.vim'
-Plugin 'godlygeek/tabular.git'
-Plugin 'tpope/vim-surround.git'
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'kien/ctrlp.vim.git'
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/syntastic.git'
+Plugin 'scrooloose/syntastic'
 " {Formating}
 Plugin 'DrawIt'
 " {Auto-completion}
