@@ -326,3 +326,10 @@ let g:ycm_extra_conf_vim_data=['getcwd()']
 " [ neco-ghc ] {{{1
 au BufRead,BufNewFile *.hs setlocal omnifunc=necoghc#omnifunc
 let g:necoghc_enable_detailed_browse = 1
+
+" [ vim-go ] {{{1
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gi <Plug>(go-install)
+au FileType go nmap <leader>gt <Plug>(go-test)
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gd <Plug>(go-def-split)
