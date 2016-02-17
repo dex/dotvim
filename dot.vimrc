@@ -86,6 +86,12 @@ highlight Search term=reverse ctermbg=4 ctermfg=7
 "set listchars=tab:>-,trail:-,eol:$,nbsp:%,extends:>,precedes:<
 "set showbreak=↪
 
+" mouse
+if &term != "builtin_gui"
+	set mouse=a
+	set ttymouse=sgr
+endif
+
 " encodings
 set fileencoding=utf-8
 set fileencodings=utf-8,big5,ucs-bom,gbk,latin1
@@ -260,10 +266,6 @@ map <F12> :NERDTreeToggle<CR>:TagbarToggle<CR>:copen 8<CR>2<C-w>w
 function! OpenIDE(proj)
 	set cursorline
 	set number
-	if &term != "builtin_gui"
-		set mouse=a
-		set ttymouse=sgr
-	endif
 	if &term != "screen" && g:isResized == 0
 		set columns=175
 		set lines=50
