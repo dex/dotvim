@@ -57,6 +57,9 @@ Plugin 'SirVer/ultisnips'
 "Plugin 'eagletmt/neco-ghc'
 " {Go}
 Plugin 'fatih/vim-go'
+" {Lua}
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-lua-ftplugin'
 " {My Plugin}
 Plugin 'dex/p4.vim'
 
@@ -335,3 +338,7 @@ au FileType go nmap <leader>gi <Plug>(go-install)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gr <Plug>(go-run)
 au FileType go nmap <leader>gd <Plug>(go-def-split)
+
+" [ vim-lua-ftplugin ] {{{1
+let g:lua_complete_omni = 1
+let g:lua_compiler_name = '/usr/bin/luac'
