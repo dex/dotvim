@@ -41,7 +41,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'JazzCore/ctrlp-cmatcher'
-Plugin 'FelikZ/ctrlp-py-matcher'
+"Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'nixprime/cpsm'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/syntastic'
 " {Formating}
@@ -251,7 +252,8 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_custom_ignore = '\v[\/]buildroot[\/](tools|toolchain|build)$'
 "let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-let g:ctrlp_match_func = {'match' : 'pymatcher#PyMatch' }
+"let g:ctrlp_match_func = {'match' : 'pymatcher#PyMatch' }
+let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 
 " [ ColorSchema ] {{{1
 "colors vividchalk
