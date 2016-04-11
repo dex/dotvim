@@ -178,6 +178,10 @@ flags = [
 'include',
 '-I',
 'src/include',
+'-I',
+'atheros/linux/driver/rks_include',
+'-I',
+'/usr/include/luajit-2.0',
 ]
 
 
