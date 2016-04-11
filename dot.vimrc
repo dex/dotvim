@@ -40,6 +40,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/syntastic'
 " {Formating}
@@ -248,6 +249,7 @@ let g:ctrlp_working_path_mode = '0'
 let g:ctrlp_max_files = 0
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_custom_ignore = '\v[\/]buildroot[\/](tools|toolchain|build)$'
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " [ ColorSchema ] {{{1
 "colors vividchalk
