@@ -34,6 +34,7 @@ Plugin 'drmikehenry/vim-fontsize'
 Plugin 'fatih/molokai'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
+Plugin 'nanotech/jellybeans.vim'
 " {Programming}
 Plugin 'a.vim'
 Plugin 'godlygeek/tabular'
@@ -257,8 +258,8 @@ let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 let g:cpsm_match_empty_query = 0
 
 " [ ColorSchema ] {{{1
-"colors vividchalk
-colors molokai
+"colors molokai
+colors jellybeans
 set background=dark
 " Set background transparent for molokai theme
 hi Normal ctermfg=252 ctermbg=none guifg=#F8F8F2 guibg=#1B1D1E
