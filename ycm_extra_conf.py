@@ -182,6 +182,8 @@ flags = [
 'atheros/linux/driver/rks_include',
 '-I',
 '/usr/include/luajit-2.0',
+'-I',
+'/usr/include/glib-2.0',
 ]
 
 
