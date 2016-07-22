@@ -3,7 +3,7 @@ set guioptions-=T  "Disable toolbar
 "set guifont=Inconsolata\ 12
 "set guifont=Consolas\ 11
 if has("gui_macvim")
-	set guifont=Monaco:h12
+	set guifont=Monaco:h10
 	set transparency=5
 else
 	set guifont=Monaco\ 11
