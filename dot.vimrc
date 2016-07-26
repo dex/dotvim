@@ -109,7 +109,7 @@ set termencoding=utf-8
 
 " tab setup
 au BufRead,BufNewFile *.py set ts=4 sw=4 et
-au BufRead,BufNewFile *.c,*.cc,*.h set ts=4 sw=4 et
+au BufRead,BufNewFile *.c,*.cc,*.C,*.h set ts=4 sw=4 et
 
 " Set color column
 au FileType c,cpp,python,vim,sh,go setlocal colorcolumn=80 list

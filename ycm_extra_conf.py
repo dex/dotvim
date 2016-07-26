@@ -184,6 +184,8 @@ flags = [
 '/usr/include/luajit-2.0',
 '-I',
 '/usr/include/glib-2.0',
+'-I',
+'scg/common/lib/rks_shmUtils/inc/',
 ]
 
 
