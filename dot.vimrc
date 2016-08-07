@@ -276,7 +276,8 @@ let g:isResized=0
 map <F12> :NERDTreeToggle<CR>:TagbarToggle<CR>:copen 8<CR>2<C-w>w
 function! OpenIDE(proj)
 	set cursorline
-	set number
+	"set number
+	set relativenumber
 	if &term != "screen" && g:isResized == 0
 		set columns=175
 		set lines=50
