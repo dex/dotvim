@@ -52,6 +52,8 @@ Plugin 'DrawIt'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
+Plugin 'thiblahute/gobject-snippets'
+Plugin 'ternjs/tern_for_vim'
 " {Haskell}
 "Plugin 'bitc/lushtags'
 "Plugin 'lukerandall/haskellmode-vim'
