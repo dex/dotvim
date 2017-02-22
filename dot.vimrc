@@ -66,6 +66,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-ftplugin'
 " {My Plugin}
 Plugin 'dex/p4.vim'
+Plugin 'dex/vim-slog'
 
 call vundle#end()		"required
 
