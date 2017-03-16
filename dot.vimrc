@@ -27,6 +27,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'benmills/vimux'
 Plugin 'csexton/jekyll.vim'
 Plugin 'bling/vim-airline'
+Plugin 'easymotion/vim-easymotion'
 " {Look and Feel}
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-vividchalk'
@@ -159,14 +160,14 @@ function! LoadCscope()
 	endif
 endfunction
 au BufEnter * call LoadCscope()
-nmap <Leader>\s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <Leader>\g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <Leader>\c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <Leader>\t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <Leader>\e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <Leader>\f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <Leader>\i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <Leader>\d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>fs :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>fg :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>fc :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>ft :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>fe :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>ff :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <Leader>fi :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <Leader>fd :cs find d <C-R>=expand("<cword>")<CR><CR>
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 "let g:SuperTabRetainCompletionType=2
 "let g:SuperTabDefaultCompletionType="<C-X><C-O>"

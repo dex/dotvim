@@ -186,6 +186,12 @@ flags = [
 '/usr/include/glib-2.0',
 '-I',
 'scg/common/lib/rks_shmUtils/inc/',
+'-I',
+'scg/control_plane/sessmgr/inc/',
+'-I',
+'scg/common/lib/scgSessMgrIpc/inc/',
+'-I',
+'scg/common/lib/scgSessMgrIpc/src/',
 ]
 
 
