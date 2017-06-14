@@ -38,7 +38,6 @@ Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'nanotech/jellybeans.vim'
 " {Programming}
 Plugin 'a.vim'
-Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -48,7 +47,9 @@ Plugin 'nixprime/cpsm'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/syntastic'
 " {Formating}
+Plugin 'godlygeek/tabular'
 Plugin 'DrawIt'
+Plugin 'rhysd/vim-clang-format'
 " {Auto-completion}
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'honza/vim-snippets'
