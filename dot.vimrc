@@ -36,6 +36,7 @@ Plugin 'fatih/molokai'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'aftersyntaxc.vim'
 " {Programming}
 Plugin 'a.vim'
 Plugin 'tpope/vim-surround'
@@ -266,11 +267,12 @@ nmap <Leader>\3 :CtrlPMRUFiles<CR>
 nmap <Leader>\4 :CtrlPBufTag<CR>
 
 " [ ColorSchema ] {{{1
-"colors molokai
-colors jellybeans
 set background=dark
+colors solarized
+"colors molokai
+"colors jellybeans
 " Set background transparent for molokai theme
-hi Normal ctermfg=252 ctermbg=none guifg=#F8F8F2 guibg=#1B1D1E
+"hi Normal ctermfg=252 ctermbg=none guifg=#F8F8F2 guibg=#1B1D1E
 
 " [ Vimux ] {{{1
 map <Leader>\a :VimuxRunLastCommand<CR>

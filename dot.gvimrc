@@ -17,8 +17,8 @@ endif
 "let g:solarized_contrast="high"    	"default value is normal
 "let g:solarized_visibility="high"    	"default value is normal
 "let g:solarized_hitrail=1    		"default value is 0
-"set background=dark
-"colors solarized
+set background=dark
+colors solarized
 
 set columns=80
 set lines=24

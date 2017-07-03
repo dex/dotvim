@@ -82,6 +82,12 @@ flags = [
 'scg/common/lib/scgSessMgrIpc/inc/',
 '-I',
 'scg/common/lib/scgSessMgrIpc/src/',
+'-I',
+'scg/common/services/messaging/CSL/inc/',
+'-I',
+'scg/common/services/messaging/MSL/ruckus/rmsl/inc/',
+'-I',
+'scg/common/lib/smapi/',
 ]
 
 
