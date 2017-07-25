@@ -51,6 +51,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'DrawIt'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'DoxygenToolkit.vim'
 " {Auto-completion}
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'honza/vim-snippets'
@@ -288,7 +289,7 @@ function! OpenIDE(proj)
 	set cursorline
 	set number
 	set relativenumber
-	if &term != "screen" && g:isResized == 0
+	if &term !~ "screen*" && g:isResized == 0
 		set columns=175
 		set lines=50
 		let g:isResized=1
