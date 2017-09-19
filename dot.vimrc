@@ -359,6 +359,8 @@ au FileType go nmap <leader>gi <Plug>(go-install)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gr <Plug>(go-run)
 au FileType go nmap <leader>gd <Plug>(go-def-split)
+let g:go_list_type = 'quickfix'
+let g:go_list_height = 8
 let g:go_list_autoclose = 0
 
 " [ vim-lua-ftplugin ] {{{1
