@@ -37,6 +37,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'aftersyntaxc.vim'
+Plugin 'aklt/plantuml-syntax'
 " {Programming}
 Plugin 'a.vim'
 Plugin 'tpope/vim-surround'
@@ -366,3 +367,5 @@ let g:go_list_autoclose = 0
 " [ vim-lua-ftplugin ] {{{1
 let g:lua_complete_omni = 1
 let g:lua_compiler_name = '/usr/bin/luac'
+" [ plantuml ] {{{1
+let g:plantuml_executable_script = '/usr/bin/google-chrome'
