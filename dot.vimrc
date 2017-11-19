@@ -38,6 +38,7 @@ Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'aftersyntaxc.vim'
 Plugin 'aklt/plantuml-syntax'
+Plugin 'plasticboy/vim-markdown'
 " {Programming}
 Plugin 'a.vim'
 Plugin 'tpope/vim-surround'
