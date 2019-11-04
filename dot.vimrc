@@ -221,8 +221,9 @@ function! TryNTFind()
 	elseif bufwinnr(t:NERDTreeBufName) == -1 
 	elseif !empty(&buftype) 
 	elseif empty(bufname("%"))
+	elseif bufname("%") == t:NERDTreeBufName
 	else
-		try | NERDTreeFind | catch | wincmd p | return | endtry
+		try | NERDTreeFind % | catch | wincmd p | return | endtry
 		exec bufwinnr(t:NERDTreeBufName)."wincmd w"
 		exec "normal zz"
 		wincmd p
