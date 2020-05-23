@@ -221,8 +221,9 @@ function! TryNTFind()
 	elseif bufwinnr(t:NERDTreeBufName) == -1 
 	elseif !empty(&buftype) 
 	elseif empty(bufname("%"))
+	elseif bufname("%") == t:NERDTreeBufName
 	else
-		try | NERDTreeFind | catch | wincmd p | return | endtry
+		try | NERDTreeFind % | catch | wincmd p | return | endtry
 		exec bufwinnr(t:NERDTreeBufName)."wincmd w"
 		exec "normal zz"
 		wincmd p
@@ -245,13 +246,22 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 " old vim-powerline symbols
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
+"let g:airline_left_sep = '⮀'
+"let g:airline_left_alt_sep = '⮁'
+"let g:airline_right_sep = '⮂'
+"let g:airline_right_alt_sep = '⮃'
+"let g:airline_symbols.branch = '⭠'
+"let g:airline_symbols.readonly = '⭤'
+"let g:airline_symbols.linenr = '⭡'
+" new vim-powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.maxlinenr = ''
 
 " [ CtrlP ] {{{1
 let g:ctrlp_map = '<c-p>'
@@ -273,9 +283,10 @@ nmap <Leader>\4 :CtrlPBufTag<CR>
 
 " [ ColorSchema ] {{{1
 set background=dark
-colors solarized
+"colors solarized
 "colors molokai
 "colors jellybeans
+colors default
 " Set background transparent for molokai theme
 "hi Normal ctermfg=252 ctermbg=none guifg=#F8F8F2 guibg=#1B1D1E
 
@@ -318,7 +329,7 @@ autocmd FileType qf wincmd J
 let g:vimwiki_list = [{
  \ 'path': '~/Documents/vimwiki/',
  \ 'path_html': '~/public_html/',
- \ 'diary_rel_path' : '',
+ \ 'diary_rel_path' : '.',
  \ 'template_path': '~/Documents/vimwiki/templates/',
  \ 'template_default': 'default',
  \ 'template_ext': '.html',
