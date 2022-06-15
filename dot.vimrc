@@ -273,7 +273,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_custom_ignore = '\v[\/]buildroot[\/](tools|toolchain|build)$'
 "let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 "let g:ctrlp_match_func = {'match' : 'pymatcher#PyMatch' }
-let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
+"let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 let g:cpsm_match_empty_query = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 nmap <Leader>\1 :CtrlPBookmarkDir<CR>
