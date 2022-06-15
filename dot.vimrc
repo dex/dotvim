@@ -56,7 +56,7 @@ Plugin 'DrawIt'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'DoxygenToolkit.vim'
 " {Auto-completion}
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
 Plugin 'thiblahute/gobject-snippets'
